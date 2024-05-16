@@ -1,0 +1,200 @@
+:root {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+body {
+    background-color: burlywood;
+}
+
+#header {
+    text-align: center;
+}
+
+main,
+form {
+    display: flex;
+    gap: 1rem;
+}
+
+main {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
+}
+
+form {
+    position: relative;
+    min-height: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+form .form-group:last-of-type {
+    flex-grow: 1;
+    justify-content: end;
+}
+
+section {
+    padding: 0.2rem 3rem;
+    background-color: rgb(214, 235, 99);
+    border: 3px solid black;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 350px;
+    transition: all 0.3s ease-in-out;
+}
+
+section:hover {
+    background-color: rgb(130, 221, 26);
+    border-style: dashed;
+    transition: all 0.3s ease-in-out;
+}
+
+form .title {
+    font-size: xx-large;
+    margin: 0;
+    text-transform: uppercase;
+    margin-top: 3.5rem;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-group label {
+    font-size: large;
+    font-weight: 600;
+}
+
+.form-group input {
+    padding: 0.5rem 1rem;
+    font-size: large;
+    border-radius: 5px;
+    background-color: rgb(195, 214, 230);
+}
+
+.form-group input:focus {
+    outline: none;
+    background-color: white;
+}
+
+button {
+    cursor: pointer;
+}
+
+.form-group button[type="submit"] {
+    color: white;
+    background-color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: larger;
+    transition: all 0.1s ease-in-out;
+}
+
+.form-group button[type="submit"]:hover {
+    background-color: rgb(111, 5, 199);
+    box-shadow: 1px 1px 4px black;
+    transition: all 0.1s ease-in-out;
+}
+
+.form-group fieldset {
+    margin: 2rem;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.form-group fieldset legend {
+    font-size: medium;
+    padding: 0 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.form-group fieldset h1 {
+    text-align: center;
+    margin: 0;
+    min-height: 32px;
+    max-width: 200px;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(130, 221, 26) rgb(214, 235, 99);
+}
+
+form button[type="reset"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.1rem;
+    padding: 0.5rem;
+    background-color: transparent;
+    font-size: xx-large;
+    font-weight: 900;
+    line-height: 1;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-family: Lucida Sans Unicode;
+    transition: all 0.1s ease-in-out;
+}
+
+form button[type="reset"]:hover {
+    box-shadow: 1px 1px 4px 0px black;
+    transition: all 0.1s ease-in-out;
+}
+
+.an-z-out-in {
+    animation: 0.7s an-z-out-in ease-in-out;
+}
+
+.an-shake {
+    animation: 0.25s an-shake 2 ease-in-out;
+}
+
+@keyframes an-z-out-in {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes an-shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(5px);
+    }
+
+    50% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
